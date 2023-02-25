@@ -1,6 +1,8 @@
-Flask
-sklearn
-pandas
-numpy
-matplotlib
-seaborn
+## The requirements for this project are -
+
+1. Flask
+2. sklearn
+3. pandas
+4. numpy
+5. matplotlib
+6. seaborn
