@@ -6,3 +6,4 @@
 4. numpy
 5. matplotlib
 6. seaborn
+7. gunicorn
