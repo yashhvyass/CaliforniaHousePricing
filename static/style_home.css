@@ -1,0 +1,61 @@
+body {
+    margin: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("images/House.jpg");
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.avatar {
+    width: 180px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.card {
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(169, 169, 169, 0.2);
+    box-shadow: 0 4px 3px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+
+    color: black;
+    border: 2px solid rgb(169, 169, 169, 0.3);
+}
+
+.border-blue {
+    border: 2px dotted blue;
+}
+
+.card2 {
+    color: black;
+    background: rgb(169, 169, 169, 0.2);
+    box-shadow: 0 4px 3px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(169, 169, 169, 0.3);
+
+    margin-top: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.card .links img {
+     width: 20px;
+     border-radius: 10px;
+     padding: auto;
+     margin: 0 1px;
+}
+
+.span {
+    color: saddlebrown;
+}

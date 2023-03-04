@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>California House Price Prediction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+
+<body>
+  <div class="login">
+    <!-- Main Input For Receiving Query to our ML -->
+    <div class="title">California House Price Prediction</div>
+      <form action="{{ url_for('predict')}}" method ="POST">
+        
+        <div class="card">
+          
+          <div class="cardhead">
+            <h5> Enter the following details: </h5>
+          </div>
+          <div class="input-container">
+            <input id="Median Income in a block" class="input" type="text"
+                   placeholder="Median Income" required="required" name="Median Income"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Median house age in a block" class="input" type="text"
+             placeholder="Median Age of the house" required="required" name="Median Age"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Average number of rooms per house" class="input" type="text"
+             placeholder="Average number of rooms" required="required" name="Average Number of Rooms"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Average number of bedrooms per house" class="input" type="text"
+             placeholder="Average number of bedrooms" required="required" name="Average Number of Bedrooms"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Block's population" class="input" type="text" 
+            placeholder="Block's population" required="required" name="Population"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Average number of household members" class="input" type="text"
+             placeholder="Average number of household members" required="required" name="Average number of household members"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Block's latitude" class="input" type="text" 
+            placeholder="Block's latitude"required="required" name="Block's Latitude"/>
+          </div>
+    
+          <div class="input-container">
+            <input id="Block's longitude" class="input" type="text" 
+            placeholder="Block's longitude" required="required" name="Block's Longitude"/>
+          </div>
+          
+          <div class="nav-wrapper">
+            <button type="text" class="submit">Nah..I'm good</button>
+            <button type="text" class="submit">Predict</button>
+          </div>
+
+        </div>
+      </form>
+
+  </div>
+  <div class="prediction">
+    {{prediction_text}}
+  </div>
+
+</body>
+</html>

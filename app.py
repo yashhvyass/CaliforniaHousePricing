@@ -10,32 +10,44 @@ regmodel = pickle.load(open('regmodel.pkl', 'rb'))
 scalar = pickle.load(open('scaling.pkl', 'rb'))
 
 @app.route('/')   ## first route/page 
+@app.route('/home.html')
 def home():
     return render_template('home.html')
 
+@app.route('/work.html')   ## first route/page
+def work():
+    return render_template('work.html')
+
 ## Api creation which we can call through postman.(send a request to app and get output)
-@app.route('/predict_api', methods = ['POST'])
-def predict_api():
-    ## Get DATA
-    data = request.json['data']   ##whenever i hit predict_api the input will be in json format
-    print(data)
+# @app.route('/predict_api', methods = ['POST'])
+# def predict_api():
+#     ## Get DATA
+#     data = request.json['data']   ##whenever i hit predict_api the input will be in json format
+#     print(data)
 
-    ## Standard Scalar
-    print(np.array(list(data.values())).reshape(1, -1))
-    new_data = scalar.transform(np.array(list(data.values())).reshape(1, -1))
+#     ## Standard Scalar
+#     print(np.array(list(data.values())).reshape(1, -1))
+#     new_data = scalar.transform(np.array(list(data.values())).reshape(1, -1))
 
-    ## Model
-    output = regmodel.predict(new_data)
-    print(output[0])
-    return jsonify(output[0])
+#     ## Model
+#     output = regmodel.predict(new_data)
+#     print(output[0])
+#     return jsonify(output[0])
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/work.html', methods = ['POST'])
 def predict():
     data = [float(x) for x in request.form.values()]
     final_input = scalar.transform(np.array(data).reshape(1, -1))
     print(final_input)
     output = regmodel.predict(final_input)[0]
-    return render_template("home.html", prediction_text = f"The house price in California will be : {output}")
+    
+    return render_template("work.html", prediction_text = "The house price in California will be : {}".format(output))
+
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     form_data = request.form
+#     values = ', '.join(form_data.values())
+#     return f"Form submitted successfully! Values: {values}"
 
 if __name__ == "__main__":
     app.run(debug=True)

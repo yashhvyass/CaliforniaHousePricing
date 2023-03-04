@@ -1,0 +1,96 @@
+img {
+    margin-top: 50px;
+    display: block;
+    width: 400px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+}
+
+body {
+    color: black;
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 50px;
+    display: block;
+    background-image: url("images/House.jpg");
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input {
+    margin-top: 10px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: block;
+    color: black;
+    background: rgb(169, 169, 169, 0.2);
+    box-shadow: 0 4px 3px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(169, 169, 169, 0.4);
+
+    border-radius: 10px;
+    border-style: groove;
+    margin-top: 100px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 50px;
+    padding: auto;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    border: 2px;
+    border-radius: 20px;
+    color: darkslategray;
+    background-color: whitesmoke;
+    font-weight: 400;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    font-weight: bold;
+    margin: 10px 8px;
+    font-family: inherit;
+}
+
+.prediction {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+    border-radius: 10px;
+    background: rgb(169, 169, 169, 0.2);
+    box-shadow: 0 4px 3px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(169, 169, 169, 0.4);
+
+}
+
+.cardhead {
+    display: flex;
+    justify-content: center;
+}

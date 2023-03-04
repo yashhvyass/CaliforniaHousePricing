@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html >
+<html>
+    <head>
+        <title> Home Page </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <img class="avatar" src = "{{ url_for('static', filename='images/Yash_photo.png')}}"
+                    alt="Yash Vyas smiling at the camera." >
 
-  
-</head>
+                <div>
+                    <h4> <span> Hey! I'm Yash Vyas </span> </h4>
+                    <p> <span class="auto-type"></span> </p>
+                    <!-- <h4> Bengaluru, India </h4> -->
+                </div>
 
-<body>
- <div class="login">
-	<h2> California House Price Prediction</h2>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/yashvyas1405/"> <img src= "{{ url_for('static', filename='images/linkedin_photo.png')}}" ></a>
+                    <a href="https://www.github.com/yashvyas1405/"> <img src= "{{ url_for('static', filename='images/Github_logo.png')}}" ></a>
+                    <a href="https://www.kaggle.com/yashhvyass/"> <img src= "{{ url_for('static', filename='images/kaggle.png')}}" ></a>
+                </div>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="Median Income in a block" placeholder="Median Income" required="required" /><br>
-    	<input type="text" name="Median house age in a block" placeholder="Median Age of the house" required="required" /><br>
-        <input type="text" name="Average number of rooms per house" placeholder="Average number of rooms" required="required" /><br>
-        <input type="text" name="Average number of bedrooms per house" placeholder="Average number of bedrooms" required="required" /><br>
-        <input type="text" name="Block's population" placeholder="Population" required="required" /><br>
-        <input type="text" name="Average number of household members" placeholder="Average number of household members" required="required" /><br>
-        <input type="text" name="Block's latitude" placeholder="Latitude" required="required" /><br>
-        <input type="text" name="Block's longitude" placeholder="Longitude" required="required" /><br>
-       
-        <button type="submit" class="btn btn-primary btn-block btn-medium">Predict</button>
-    </form>
+            </div>
 
-   <br>
-   <br>
-  
-   
- </div>
- {{prediction_text}}
+            <div class="card2">
+                <ul>
+                    <li> Predict the price of the houses in California. <a href="work.html">  here.</a> </li>
+                </ul>
+            </div>
 
-</body>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ['Data Scientist', 'Sports Fanatic'],
+                    typeSpeed:100,
+                    backSpeed:50,
+                    loop: true
+                })
+        </script>
+    </body>
 </html>
