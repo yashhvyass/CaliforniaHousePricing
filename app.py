@@ -18,6 +18,10 @@ def home():
 def work():
     return render_template('work.html')
 
+@app.route('/about.html')   ## first route/page
+def about():
+    return render_template('about.html')
+
 ## Api creation which we can call through postman.(send a request to app and get output)
 # @app.route('/predict_api', methods = ['POST'])
 # def predict_api():

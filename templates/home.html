@@ -9,29 +9,55 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css')}}">
     </head>
     <body>
+        <div class="hero">
+              <a href="home.html"> <img class="image" src="{{ url_for('static', filename='images/yash_logo.png')}}" > </a>
+
+              <ul class="nav_list">
+                <li><a href="home.html"> HOME </a></li>
+                <li><a href="about.html"> ABOUT </a></li>
+              </ul>
+              
+            </nav>
+        </div>
+
         <div class="container">
             <div class="card">
-                <img class="avatar" src = "{{ url_for('static', filename='images/Yash_photo.png')}}"
-                    alt="Yash Vyas smiling at the camera." >
 
-                <div>
-                    <h4> <span> Hey! I'm Yash Vyas </span> </h4>
-                    <p> <span class="auto-type"></span> </p>
-                    <!-- <h4> Bengaluru, India </h4> -->
+                <div class="my_avatar">
+                    <img class="my_avatar_photo" src = "{{ url_for('static', filename='images/Yash_photo.png')}}"
+                        alt="Yash Vyas smiling at the camera." >
+                        <br>
+                        <h4> Yash Vyas <br> <span class="auto-type"></span> </h4>
+                        <!-- <h4> Bengaluru, India </h4> -->
+                </div>
+
+                <div class="card2" data-tilt>
+                    <h4> <center> Machine Learning </center></h4>
+                    <ul>
+                        <li> Predict the price of the houses in California. <a href="work.html">  here.</a> </li>
+                    </ul>
+                </div>
+
+                <div class="card3" data-tilt>
+                    <h4> <center> Natural Language Processing </center></h4>
+                    <ul>
+                        <li> Text Analytics coming soon....<a href="work.html">  here.</a> </li>
+                    </ul>
+                </div>
+
+                <div class="card4" data-tilt>
+                    <h4> <center> Convoluted Neural Networks  </center></h4>
+                    <ul>
+                        <li> Something with Pytorch coming soon....<a href="work.html">  here.</a> </li>
+                    </ul>
                 </div>
 
                 <div class="links">
-                    <a href="https://www.linkedin.com/in/yashvyas1405/"> <img src= "{{ url_for('static', filename='images/linkedin_photo.png')}}" ></a>
-                    <a href="https://www.github.com/yashvyas1405/"> <img src= "{{ url_for('static', filename='images/Github_logo.png')}}" ></a>
-                    <a href="https://www.kaggle.com/yashhvyass/"> <img src= "{{ url_for('static', filename='images/kaggle.png')}}" ></a>
+                    <a href="https://www.linkedin.com/in/yashvyas1405/" target="_blank" rel="noopener noreferrer"> <img src= "{{ url_for('static', filename='images/linkedin_photo.png')}}" ></a>
+                    <a href="https://www.github.com/yashvyas1405/" target="_blank" rel="noopener noreferrer"> <img src= "{{ url_for('static', filename='images/Github_logo.png')}}" ></a>
+                    <a href="https://www.kaggle.com/yashhvyass/" target="_blank" rel="noopener noreferrer"> <img src= "{{ url_for('static', filename='images/kaggle.png')}}" ></a>
                 </div>
 
-            </div>
-
-            <div class="card2">
-                <ul>
-                    <li> Predict the price of the houses in California. <a href="work.html">  here.</a> </li>
-                </ul>
             </div>
 
         </div>
@@ -44,5 +70,7 @@
                     loop: true
                 })
         </script>
+
+        <script src="static/images/vanilla-tilt.js"></script>
     </body>
 </html>
